@@ -637,6 +637,10 @@
   #define CFG_TUH_MSC    0
 #endif
 
+#ifndef CFG_TUD_MTP
+  #define CFG_TUD_MTP             0
+#endif
+
 #ifndef CFG_TUH_VENDOR
   #define CFG_TUH_VENDOR 0
 #endif

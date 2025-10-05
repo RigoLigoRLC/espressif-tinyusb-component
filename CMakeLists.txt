@@ -37,6 +37,7 @@ set(srcs
     "src/class/hid/hid_device.c"
     "src/class/midi/midi_device.c"
     "src/class/msc/msc_device.c"
+    "src/class/mtp/mtp_device.c"
     "src/class/vendor/vendor_device.c"
     "src/class/audio/audio_device.c"
     "src/class/video/video_device.c"
