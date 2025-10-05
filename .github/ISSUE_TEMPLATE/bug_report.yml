@@ -8,20 +8,28 @@ body:
       label: Answers checklist.
       description: Before submitting a new issue, please follow the checklist and try to find the answer.
       options:
-        - label: I have read the component documentation [ESP-IDF Components](https://components.espressif.com) and the issue is not addressed there.
-          required: true
-        - label: I am using target and esp-idf version as defined in component's idf_component.yml
-          required: true
-        - label: I have searched the upstream [issue tracker](https://github.com/hathach/tinyusb/issues?q=is%3Aissue) for a similar issue and not found any related issue.
-          required: true
-        - label: I have searched the Espressif esp-usb component [issue tracker](https://github.com/espressif/esp-usb/issues?q=is%3Aissue) for a similar issue and not found any related issue.
-          required: true
+              - Linux
+              - MacOS
+              - RaspberryPi OS
+              - Windows 7
+              - Windows 10
+              - Windows 11
+              - Others
+    validations:
+      required: true
+
+  - type: input
+    attributes:
+      label: Commit SHA
+      placeholder: e.g 3a042b37da28d0ba1e5593eb1068ca5645d77b56 or version bundled by esp-idf or pico-sdk
+    validations:
+      required: true
+
   - type: input
     id: idf_version
     attributes:
-      label: ESP-IDF version.
-      description: Which ESP-IDF version does this issue occur on? Run `git describe --tags` in your esp-idf folder to find it.
-      placeholder: ex. v5.0-rc1
+      label: Board
+      placeholder: e.g Adafruit Feather nRF52840 Express
     validations:
       required: true
   - type: input
@@ -48,3 +56,11 @@ body:
       placeholder: ex. I tried on Windows 10 PC and the issue couldn't be reproduced there.
     validations:
       required: false
+
+  - type: checkboxes
+    attributes:
+      label: I have checked existing issues, dicussion and documentation
+      description: You agree to check all the resources above before opening a new issue.
+      options:
+        - label: I confirm I have checked existing issues, dicussion and documentation.
+          required: true
